@@ -69,7 +69,7 @@ def feature_engineering(df, holidays=None):
     df["Quarter"] = df.index.quarter.astype("int")
     df["Year"] = df.index.year.astype("int")
     if holidays is not None:
-        df["Holiday"] = [1 if date in us_holidays else 0 for date in df.index.date]
+        df["Holiday"] = [1 if date in holidays else 0 for date in df.index.date]
 
     # Add template features
     week_profiles_peaks_train = template_single_column(
