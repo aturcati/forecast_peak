@@ -21,6 +21,8 @@ scipy = "^1.14.1"
 ppscore = {git = "https://github.com/aturcati/ppscore.git"}
 setuptools = "^75.2.0"
 loguru = "^0.7.2"
+jupyter = "^1.1.1"
+notebook = "^7.2.2"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6.9"

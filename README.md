@@ -48,4 +48,3 @@ To run the probability estimation script:
 ```sh
 python estimate_probability.py
 ```
-
