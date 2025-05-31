@@ -19,7 +19,7 @@ catboost = "^1.2.7"
 statsmodels = "^0.14.4"
 scipy = "^1.14.1"
 ppscore = {git = "https://github.com/aturcati/ppscore.git"}
-setuptools = "^75.2.0"
+setuptools = "^78.1.1"
 loguru = "^0.7.2"
 jupyter = "^1.1.1"
 notebook = "^7.2.2"
