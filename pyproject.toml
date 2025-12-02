@@ -1,32 +1,37 @@
-[tool.poetry]
-name = "amperon-take-home"
+[project]
+name = "forecast-peak"
 version = "0.0.1"
-description = "Take Home Assignement for Amperon Interview."
-authors = ["Andrea Turcati <aturcati@gmail.com>"]
+description = "Forecast Peak in electricity demand."
+authors = [
+    {name = "Andrea Turcati", email = "aturcati@gmail.com"}
+]
 readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.2.3,<3.0.0",
+    "matplotlib>=3.9.2,<4.0.0",
+    "seaborn>=0.13.2,<0.14.0",
+    "lightgbm>=4.6.0,<5.0.0",
+    "ipywidgets>=8.1.5,<9.0.0",
+    "holidays>=0.58,<0.59",
+    "scikit-learn>=1.5.2,<2.0.0",
+    "xgboost>=2.1.1,<3.0.0",
+    "catboost>=1.2.7,<2.0.0",
+    "statsmodels>=0.14.4,<0.15.0",
+    "scipy>=1.14.1,<2.0.0",
+    "ppscore",
+    "setuptools>=78.1.1,<79.0.0",
+    "loguru>=0.7.2,<0.8.0",
+    "jupyter>=1.1.1,<2.0.0",
+    "notebook>=7.2.2,<8.0.0",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.10"
-pandas = "^2.2.3"
-matplotlib = "^3.9.2"
-seaborn = "^0.13.2"
-lightgbm = "^4.6.0"
-ipywidgets = "^8.1.5"
-holidays = "^0.58"
-scikit-learn = "^1.5.2"
-xgboost = "^2.1.1"
-catboost = "^1.2.7"
-statsmodels = "^0.14.4"
-scipy = "^1.14.1"
-ppscore = {git = "https://github.com/aturcati/ppscore.git"}
-setuptools = "^78.1.1"
-loguru = "^0.7.2"
-jupyter = "^1.1.1"
-notebook = "^7.2.2"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.6.9"
-ipykernel = "^6.29.5"
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.6.9,<0.7.0",
+    "ipykernel>=6.29.5,<7.0.0",
+]
 
 [build-system]
-package-mode = false
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
